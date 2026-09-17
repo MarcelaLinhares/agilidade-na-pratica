@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agilidade na prática | Scrum e Kanban</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #263238;
+            color: white;
+            padding: 50px 20px 35px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #dce3e8;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 30px 20px 50px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 35px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #263238;
+            margin-bottom: 15px;
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            margin-top: 22px;
+            margin-bottom: 8px;
+            color: #37474f;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin: 10px 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .highlight {
+            background: #eef3f5;
+            border-left: 5px solid #607d8b;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 25px 0;
+        }
+
+        .flow-item {
+            background: #eceff1;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 1.3rem;
+            color: #607d8b;
+        }
+
+        .research {
+            text-align: center;
+            background: #263238;
+            color: white;
+        }
+
+        .research h2 {
+            color: white;
+        }
+
+        .research p {
+            color: #e0e6e9;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 14px 28px;
+            background: white;
+            color: #263238;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #607d8b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            .flow {
+                flex-direction: column;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Agilidade na prática</h1>
+    <p>
+        Organização e gerenciamento de projetos de software com Scrum e Kanban
+    </p>
+</header>
+
+<main class="container">
+
+    <img
+        src="imagem-agilidade.jpg"
+        alt="Equipe trabalhando na organização de um projeto de software"
+        class="hero-image"
+    >
+
+    <section>
+        <h2>Apresentação</h2>
+
+        <p>
+            Projetos de software envolvem diferentes tarefas, prioridades,
+            prazos e atividades realizadas individualmente ou em equipe.
+            Sem uma forma organizada de acompanhar esse trabalho, podem
+            surgir dificuldades de priorização, comunicação e acompanhamento
+            das entregas.
+        </p>
+
+        <p>
+            Os métodos e práticas ágeis oferecem formas de organizar o
+            trabalho de maneira iterativa, visual e colaborativa, permitindo
+            acompanhar o andamento das atividades e adaptar o trabalho
+            conforme as necessidades do projeto.
+        </p>
+    </section>
+
+    <section>
+        <h2>Por que utilizar métodos ágeis?</h2>
+
+        <p>
+            Métodos ágeis valorizam a colaboração, o acompanhamento frequente
+            do trabalho e a capacidade de adaptação. Em projetos de software,
+            essas práticas podem contribuir para maior transparência sobre
+            as atividades, melhor organização das prioridades e identificação
+            de problemas durante o desenvolvimento.
+        </p>
+
+        <div class="highlight">
+            <strong>Na prática:</strong> o objetivo não é apenas organizar
+            tarefas, mas criar um fluxo de trabalho que permita acompanhar,
+            avaliar e melhorar continuamente a forma como o projeto é realizado.
+        </div>
+    </section>
+
+    <section>
+        <h2>Scrum</h2>
+
+        <p>
+            Scrum é um framework utilizado para organizar o trabalho em
+            ambientes complexos. Seu funcionamento é baseado em ciclos de
+            trabalho chamados <strong>Sprints</strong>, nos quais a equipe
+            realiza atividades planejadas e acompanha os resultados.
+        </p>
+
+        <h3>Pilares</h3>
+
+        <p>
+            O Scrum se apoia em três pilares: <strong>transparência,
+            inspeção e adaptação</strong>. A transparência permite que o
+            trabalho seja compreendido; a inspeção possibilita acompanhar
+            o que está acontecendo; e a adaptação permite ajustar o trabalho
+            quando necessário.
+        </p>
+
+        <h3>Responsabilidades e colaboração</h3>
+
+        <p>
+            O Scrum organiza responsabilidades dentro do trabalho da equipe,
+            favorecendo clareza sobre as atividades e sobre quem participa
+            de cada etapa. A colaboração e a comunicação frequente ajudam
+            a manter os integrantes alinhados em relação ao objetivo do projeto.
+        </p>
+
+        <h3>Sprints e acompanhamento</h3>
+
+        <p>
+            Uma Sprint é um período de trabalho no qual um conjunto de
+            atividades é realizado com um objetivo definido. Durante esse
+            ciclo, a equipe acompanha o andamento do trabalho e realiza
+            momentos de interação e acompanhamento, favorecendo a identificação
+            de problemas e ajustes necessários.
+        </p>
+    </section>
+
+    <section>
+        <h2>Kanban</h2>
+
+        <p>
+            Kanban é um método de gerenciamento do fluxo de trabalho que
+            utiliza a visualização das atividades para facilitar o
+            acompanhamento do que está sendo feito, do que ainda precisa
+            ser realizado e do que já foi concluído.
+        </p>
+
+        <h3>Visualização do fluxo</h3>
+
+        <p>
+            As tarefas podem ser representadas visualmente em um quadro
+            dividido em etapas. Essa visualização facilita a identificação
+            do estado de cada atividade e ajuda a perceber onde existem
+            acúmulos ou gargalos.
+        </p>
+
+        <h3>Trabalho em andamento — WIP</h3>
+
+        <p>
+            O conceito de <strong>WIP (Work in Progress)</strong> representa
+            o trabalho que está em andamento. A limitação do WIP busca evitar
+            que muitas atividades sejam iniciadas simultaneamente, ajudando
+            a equipe a concentrar esforços na conclusão das tarefas antes
+            de iniciar novas atividades.
+        </p>
+
+        <h3>Priorização e melhoria contínua</h3>
+
+        <p>
+            O fluxo de trabalho também pode ajudar na definição de prioridades,
+            permitindo que a equipe identifique quais atividades devem receber
+            atenção primeiro. O acompanhamento do fluxo possibilita identificar
+            gargalos e promover melhorias contínuas no processo.
+        </p>
+    </section>
+
+    <section>
+        <h2>Scrum + Kanban na prática</h2>
+
+        <p>
+            Scrum e Kanban podem ser utilizados de forma complementar.
+            Enquanto o Scrum organiza o trabalho em ciclos e estabelece
+            momentos de acompanhamento, o Kanban contribui para a visualização
+            e o gerenciamento do fluxo das atividades.
+        </p>
+
+        <div class="flow">
+            <div class="flow-item">Backlog</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">A fazer</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">Em andamento</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">Teste</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">Concluído</div>
+        </div>
+
+        <p>
+            Nesse exemplo, o trabalho pode ser organizado em uma Sprint,
+            enquanto o quadro Kanban permite visualizar o fluxo das tarefas.
+            A limitação do WIP ajuda a evitar excesso de atividades
+            simultâneas, e o acompanhamento frequente permite identificar
+            problemas, receber feedback e adaptar o trabalho.
+        </p>
+
+        <div class="highlight">
+            <strong>Em conjunto:</strong> Scrum pode contribuir para a
+            organização do trabalho e dos ciclos de entrega, enquanto
+            Kanban ajuda a visualizar e gerenciar o fluxo das atividades.
+            A combinação das práticas pode ser adaptada às necessidades
+            do projeto e da equipe.
+        </div>
+    </section>
+
+    <section class="research">
+        <h2>Participe da pesquisa</h2>
+
+        <p>
+            Após conhecer o conteúdo desta página, responda à pesquisa
+            da atividade de extensão. Suas respostas contribuirão para
+            a análise da experiência e para a reflexão sobre o uso de
+            práticas ágeis em projetos de software.
+        </p>
+
+        <a
+            href="https://forms.gle/e91y5G1rn5RxMoVD9"
+            target="_blank"
+            class="button"
+        >
+            Responder à pesquisa
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>Desenvolvido por Marcela Linhares Gabilan</strong></p>
+    <p>Atividade de extensão – Métodos Ágeis com Scrum</p>
+    <p>Estácio – Engenharia de Software – 2026</p>
+</footer>
+
+</body>
+</html>
